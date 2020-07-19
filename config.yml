@@ -1,0 +1,36 @@
+######################################################
+#                                                    #
+#          InventoryLogger by zPirroZ3007            #
+#             Do not share this plugin,              #
+#        otherwise your license key will be          #
+#       permanently banned without possibility       #
+#                of recovering it.                   #
+#                                                    #
+######################################################
+
+# Insert here the license key you received.
+license: ""
+
+# How much time (in seconds) do you want to save the online players' inventories?
+# Do not put this under 300 otherwise your server's performance will be affected.
+# You should increase this if you have a lot of players online on your spigot instance.
+save-every: 300
+
+# Do you want to log empty inventories? Disabling this will increase server performance.
+log-empty-inventories: false
+
+# Put this to 'false' if you want to disable the default time-logger
+logger-enabled: true
+
+# Here you can set the events where the plugin will log the inventories
+log-on:
+  death: true
+  quit: false
+  join: false
+  world-change: false
+
+# Should the plugin clean old logs automatically?
+remove-old-logs-automatically: true
+
+# Do you want to enable debug messages?
+debug: false

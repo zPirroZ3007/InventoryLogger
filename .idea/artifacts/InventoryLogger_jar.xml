@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="InventoryLogger:jar">
+    <output-path>$USER_HOME$/Desktop</output-path>
+    <root id="archive" name="InventoryLogger.jar">
+      <element id="module-output" name="InventoryLogger" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../BuildPath/PirroUtils.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/messages.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+    </root>
+  </artifact>
+</component>
