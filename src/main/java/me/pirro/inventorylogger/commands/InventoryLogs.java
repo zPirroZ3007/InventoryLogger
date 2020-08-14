@@ -103,7 +103,7 @@ public class InventoryLogs extends CommandFramework
 			if (args[0].equalsIgnoreCase("about"))
 			{
 				sender.sendMessage("");
-				sender.spigot().sendMessage(new TextComponent(" §6" + Main.getInstance().getName() + " §6v" + Main.getInstance().getDescription().getVersion() + " §eby §6zPirroZ3007\n" + " §ePurchase it on "), new TextComponentBuilder().setText("§nhttps://inventorylogger.pirro.me/").setColor(ChatColor.AQUA).setHover("§7Click here to purchase the plugin").build());
+				sender.spigot().sendMessage(new TextComponent(" §6" + Main.getInstance().getName() + " §6v" + Main.getInstance().getDescription().getVersion() + " §eby §6zPirroZ3007\n" + " §eDownload it on "), new TextComponentBuilder().setText("§nhttps://inventorylogger.pirro.me/").setColor(ChatColor.AQUA).setHover("§7Click here to purchase the plugin").build());
 				sender.sendMessage("");
 				return;
 			}

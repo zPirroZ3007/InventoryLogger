@@ -8,9 +8,6 @@
 #                                                    #
 ######################################################
 
-# Insert here the license key you received.
-license: ""
-
 # How much time (in seconds) do you want to save the online players' inventories?
 # Do not put this under 300 otherwise your server's performance will be affected.
 # You should increase this if you have a lot of players online on your spigot instance.
