@@ -137,19 +137,7 @@ public class InventoryClick implements Listener
 							logsNameMap.put(log, fileEntry.getName());
 							logsFinalized.add(log);
 						}
-					logsFinalized.sort((o1, o2) -> o1.getLong("date") > o2.getLong("date") ? -1 : 1);
-
-					for (YamlConfiguration log : logsFinalized)
-					{
-						if (i == 54)
-							break;
-						List<String> lore = new ArrayList<>();
-						for (String a : FileUtils.getMessages().getStringList("log-lore"))
-							lore.add(ChatColor.translateAlternateColorCodes('&', a));
-						lore.add("§0" + logsNameMap.get(log));
-						inv.setItem(i, new ItemStackBuilder().setItem(XMaterial.CHEST.parseItem()).setName("§a" + DateUtils.millisToDate(log.getLong("date"))).setLore(lore).build());
-						i++;
-					}
+					logs(inv, i, logsFinalized, logsNameMap);
 
 					Lists.getLastOpened().put(player.getName(), username);
 
@@ -203,6 +191,7 @@ public class InventoryClick implements Listener
 				logsNameMap.put(log, fileEntry.getName());
 				logsFinalized.add(log);
 			}
+		logsFinalized.sort((o1, o2) -> Long.compare(o2.getLong("date"), o1.getLong("date")));
 		for (int y = 0; y < (page * 45) - 45; y++)
 		{
 			if (logsFinalized.isEmpty())
@@ -220,7 +209,15 @@ public class InventoryClick implements Listener
 		for (int x = 9; x < 54; x++)
 			inv.setItem(x, XMaterial.AIR.parseItem());
 
-		logsFinalized.sort((o1, o2) -> o1.getLong("date") > o2.getLong("date") ? -1 : 1);
+		logs(inv, i, logsFinalized, logsNameMap);
+
+		inv.setItem(6, new ItemStackBuilder().setItem(Material.PAPER, Math.min(page, 64)).setName(page + "").build());
+
+		player.updateInventory();
+	}
+
+	public static void logs(Inventory inv, int i, List<YamlConfiguration> logsFinalized, Map<YamlConfiguration, String> logsNameMap) {
+
 
 		for (YamlConfiguration log : logsFinalized)
 		{
@@ -233,10 +230,6 @@ public class InventoryClick implements Listener
 			inv.setItem(i, new ItemStackBuilder().setItem(XMaterial.CHEST.parseItem()).setName("§a" + DateUtils.millisToDate(log.getLong("date"))).setLore(lore).build());
 			i++;
 		}
-
-		inv.setItem(6, new ItemStackBuilder().setItem(Material.PAPER, Math.min(page, 64)).setName(page + "").build());
-
-		player.updateInventory();
 	}
 
 }

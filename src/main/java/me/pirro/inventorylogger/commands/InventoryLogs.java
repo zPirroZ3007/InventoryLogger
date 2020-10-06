@@ -3,6 +3,7 @@ package me.pirro.inventorylogger.commands;
 import com.cryptomorin.xseries.SkullUtils;
 import com.cryptomorin.xseries.XMaterial;
 import me.pirro.inventorylogger.Main;
+import me.pirro.inventorylogger.listeners.InventoryClick;
 import me.pirro.inventorylogger.utils.FileUtils;
 import me.pirro.inventorylogger.utils.Lists;
 import me.pirro.inventorylogger.utils.Util;
@@ -157,19 +158,8 @@ public class InventoryLogs extends CommandFramework
 							logsNameMap.put(log, fileEntry.getName());
 							logsFinalized.add(log);
 						}
-					logsFinalized.sort((o1, o2) -> o1.getLong("date") > o2.getLong("date") ? -1 : 1);
-
-					for (YamlConfiguration log : logsFinalized)
-					{
-						if (i == 54)
-							break;
-						List<String> lore = new ArrayList<>();
-						for (String a : FileUtils.getMessages().getStringList("log-lore"))
-							lore.add(ChatColor.translateAlternateColorCodes('&', a));
-						lore.add("§0" + logsNameMap.get(log));
-						inv.setItem(i, new ItemStackBuilder().setItem(XMaterial.CHEST.parseItem()).setName("§a" + DateUtils.millisToDate(log.getLong("date"))).setLore(lore).build());
-						i++;
-					}
+					logsFinalized.sort((o1, o2) -> Long.compare(o2.getLong("date"), o1.getLong("date")));
+					InventoryClick.logs(inv, i, logsFinalized, logsNameMap);
 
 					Lists.getLastOpened().put(player.getName(), username);
 					new BukkitRunnable()
