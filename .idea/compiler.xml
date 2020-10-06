@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="InventoryLogger" target="8" />
+      <module name="InventoryLogger" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
