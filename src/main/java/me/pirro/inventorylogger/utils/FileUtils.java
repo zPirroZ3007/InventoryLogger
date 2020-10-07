@@ -64,7 +64,6 @@ public class FileUtils
 		config = YamlConfiguration.loadConfiguration(configFile);
 		messages = YamlConfiguration.loadConfiguration(messagesFile);
 
-		Config.LICENSE_KEY = getConfig().getString("license");
 		Config.SAVE_EVERY = getConfig().getLong("save-every");
 		Config.LOG_EMPTY_INVENTORIES = getConfig().getBoolean("log-empty-inventories");
 		Config.DEBUG = getConfig().getBoolean("debug");

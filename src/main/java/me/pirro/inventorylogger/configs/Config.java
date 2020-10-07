@@ -11,8 +11,6 @@ public class Config
 
 	public static boolean CLEAN_OLD_LOGS_AUTO;
 
-	public static String LICENSE_KEY;
-
 	public static boolean LOG_EMPTY_INVENTORIES;
 
 	public static boolean DEBUG;
