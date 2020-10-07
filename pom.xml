@@ -68,9 +68,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.zPirroZ3007</groupId>
+            <groupId>me.pirro</groupId>
             <artifactId>PirroUtils</artifactId>
-            <version>-b91a847211-1</version>
+            <version>1.3</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
