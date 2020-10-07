@@ -211,7 +211,7 @@ public class InventoryClick implements Listener
 
 		logs(inv, i, logsFinalized, logsNameMap);
 
-		inv.setItem(6, new ItemStackBuilder().setItem(Material.PAPER, Math.min(page, 64)).setName(page + "").build());
+		inv.setItem(6, new ItemStackBuilder().setItem(XMaterial.PAPER.parseMaterial().orElse(Material.STONE), Math.min(page, 64)).setName(page + "").build());
 
 		player.updateInventory();
 	}
