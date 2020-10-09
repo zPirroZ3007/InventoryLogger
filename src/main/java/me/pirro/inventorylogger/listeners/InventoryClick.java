@@ -137,6 +137,7 @@ public class InventoryClick implements Listener
 							logsNameMap.put(log, fileEntry.getName());
 							logsFinalized.add(log);
 						}
+					logsFinalized.sort((o1, o2) -> Long.compare(o2.getLong("date"), o1.getLong("date")));
 					logs(inv, i, logsFinalized, logsNameMap);
 
 					Lists.getLastOpened().put(player.getName(), username);
