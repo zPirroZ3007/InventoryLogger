@@ -64,13 +64,17 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>pirro</id>
+            <url>https://repo.pirro.me/repository/maven-snapshots/</url>
+        </repository>
     </repositories>
 
     <dependencies>
         <dependency>
             <groupId>me.pirro</groupId>
             <artifactId>PirroUtils</artifactId>
-            <version>1.4</version>
+            <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
