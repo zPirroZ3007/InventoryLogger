@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: me.pirro:PirroUtils:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/me/pirro/PirroUtils/1.0-SNAPSHOT/PirroUtils-1.0-20201029.093807-8.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/me/pirro/PirroUtils/1.0-SNAPSHOT/PirroUtils-1.0-20201029.093807-8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/me/pirro/PirroUtils/1.0-SNAPSHOT/PirroUtils-1.0-20201029.093807-8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
