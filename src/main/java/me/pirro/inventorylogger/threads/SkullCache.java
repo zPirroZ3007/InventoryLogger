@@ -1,7 +1,7 @@
 package me.pirro.inventorylogger.threads;
 
-import com.cryptomorin.xseries.SkullUtils;
 import me.pirro.inventorylogger.utils.Lists;
+import me.pirro.utils.SkullUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;

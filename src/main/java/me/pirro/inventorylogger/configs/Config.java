@@ -15,7 +15,7 @@ public class Config
 
 	public static boolean DEBUG;
 
-	public static String VERSION = "1.0.5";
+	public static String VERSION = "1.0.6";
 
 	public static boolean LOG_ON_DEATH;
 	public static boolean LOG_ON_JOIN;

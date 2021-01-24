@@ -1,6 +1,6 @@
 package me.pirro.inventorylogger.objects;
 
-import com.cryptomorin.xseries.XMaterial;
+import me.pirro.utils.XMaterial;
 import lombok.Getter;
 import org.bukkit.inventory.ItemStack;
 

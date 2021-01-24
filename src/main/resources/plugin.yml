@@ -1,5 +1,5 @@
 name: InventoryLogger
-version: 1.0.5
+version: 1.0.6
 author: zPirroZ3007
 description: This plugin logs the players' inventories so you can see them.
 main: me.pirro.inventorylogger.Main
