@@ -84,6 +84,7 @@ public class FileUtils {
             Config.LOG_ON_JOIN = getConfig().getBoolean("log-on.join");
             Config.LOG_ENABLED = getConfig().getBoolean("logger-enabled");
             Config.CLEAN_OLD_LOGS_AUTO = getConfig().getBoolean("remove-old-logs-automatically");
+			Config.OLD_TIME = getConfig().getLong("old-cleanup") * 24 * 60 * 60 * 1000;
 
             Bukkit.getScheduler().cancelTasks(Main.getInstance());
             Util.startThreads();
