@@ -15,6 +15,7 @@ log-empty-inventories: false
 # Put this to 'false' if you want to disable the default time-logger
 logger-enabled: true
 
+
 # Here you can set the events where the plugin will log the inventories
 log-on:
   death: true
@@ -24,6 +25,9 @@ log-on:
 
 # Should the plugin clean old logs automatically?
 remove-old-logs-automatically: true
+
+# Remove logs older than x days
+old-cleanup: 7
 
 # Do you want to enable debug messages?
 debug: false
